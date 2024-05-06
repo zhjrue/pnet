@@ -1,0 +1,84 @@
+[
+  {
+    "name": "材料类型",
+    "city": [
+      {
+        "name": "有机材料（Organic Materials）",
+        "area": [
+          "共价有机框架（COF）"
+        ]
+      },
+      {
+        "name": "无机材料（Inorganic Materials）",
+        "area": [
+          "碳（Carbon）",
+          "金属（Metal）",
+          "多金属（Multi-metal）",
+          "金属氧化物（Metal Oxide）",
+          "单原子（Single-atom）",
+          "硫化物（Sulfidel）"
+        ]
+      },
+      {
+        "name": "有机无机杂化材料（Organic-Inorganic Hybrid Material）",
+        "area": [
+          "金属有机框架（MOF）",
+          "复合材料（Composite）",
+          "其他（Others）"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "酶类型",
+    "city": [
+      {
+        "name": "氧化还原酶（Oxidoreductases）",
+        "area": [
+          "氧化酶（Oxidase，OXD）",
+          "过氧化氢酶（Catalase，CAT）",
+          "过氧化物酶（Peroxidase，POD）",
+          "谷胱甘肽过氧化物酶（Glutathione Peroxidase，GPx）",
+          "超氧化物歧化酶（Superoxide Dismutase，SOD）",
+          "多功能酶（Multi-functionalities）"
+        ]
+      },
+      {
+        "name": "转移酶（Transferases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      },
+      {
+        "name": "水解酶（Hydrolases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      },
+      {
+        "name": "裂解酶（Lyases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      },
+      {
+        "name": "异构酶（Isomerases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      },
+      {
+        "name": "连接酶（Ligases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      },
+      {
+        "name": "转位酶（Translocases）",
+        "area": [
+          "暂时还没有呢，快来补充吧～"
+        ]
+      }
+    ]
+  }
+]

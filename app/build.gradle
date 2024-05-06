@@ -1,0 +1,103 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    alias(libs.plugins.kotlinAndroid)
+}
+
+android {
+    namespace 'cool.ldr.pnet'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "cool.ldr.pnet"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.cardview
+    implementation libs.activity
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.utilcodex
+    implementation libs.browser
+
+    // ShapeView：https://github.com/getActivity/ShapeView
+    implementation libs.shape.view
+    // ShapeDrawable：https://github.com/getActivity/ShapeDrawable
+    implementation libs.shape.drawable
+
+    //Gson
+    implementation libs.code.gson
+
+    //https://juejin.cn/post/6864756344541413384
+    //1、lombok依赖
+    implementation libs.javax.annotation.api
+////依赖lombok的API，内部虽然已经声明了注解解释器，但在AndroidStudio上有Bug（导致编译报错找不到生成的方法），需要自己主动再声明一次
+    implementation libs.lombok
+//主动声明注解解释器
+    annotationProcessor libs.lombok
+
+//    https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    implementation libs.baseRecyclerViewAdapterHelper
+
+    implementation libs.kotlin.stdlib
+
+
+
+    //下滑
+//    https://github.com/scwang90/SmartRefreshLayout
+    implementation libs.refresh.layout.kernel      //核心必须依赖
+    implementation libs.refresh.header.classics    //经典刷新头
+    implementation libs.refresh.header.material    //谷歌刷新头
+    implementation libs.refresh.header.falsify
+//    implementation  'com.scwang.smart:refresh-header-two-level:2.0.0'
+// https://mvnrepository.com/artifact/io.github.scwang90/refresh-drawable-path
+    implementation libs.refresh.drawable.path
+
+//    https://github.com/SeptiawanAjiP/AndroidChartJS
+//    implementation libs.androidChartJS
+//    implementation 'com.github.SeptiawanAjiP:AndroidChartJS:1.0.5'
+//    implementation libs.any.chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
+    //RX
+//    https://github.com/ReactiveX/RxAndroid
+    implementation libs.rxandroid
+    implementation libs.rxjava
+
+
+// https://mvnrepository.com/artifact/com.uber.autodispose2/autodispose-android
+    implementation libs.autodispose.android
+// https://mvnrepository.com/artifact/com.uber.autodispose2/autodispose-androidx-lifecycle
+    implementation libs.autodispose.androidx.lifecycle
+}

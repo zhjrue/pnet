@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:elevation="8dp"
+        android:id="@+id/rl_about_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_close_about"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:transitionName="main_menu_tv" />
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/pb_about"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/tv_about_sync_ldr"
+            android:indeterminateTint="@android:color/white" />
+
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tv_about_sync_ldr"
+            android:layout_width="wrap_content"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="同步公告信息"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_marginTop="48dp"
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintTop_toBottomOf="@+id/rl_about_title" />
+
+    <TextView
+        android:id="@+id/about_v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="v 0.0.1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+
+    <cool.ldr.pnet.views.SettingBar
+        android:id="@+id/sb_my_love"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_rightIcon="@drawable/ic_back"
+        app:bar_leftText="我的收藏"
+        app:layout_constraintTop_toBottomOf="@+id/about_v" />
+
+    <cool.ldr.pnet.views.SettingBar
+        android:id="@+id/sb_my_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_rightIcon="@drawable/ic_back"
+        app:bar_leftText="浏览历史"
+        app:layout_constraintTop_toBottomOf="@+id/sb_my_love" />
+
+    <cool.ldr.pnet.views.SettingBar
+        android:layout_marginTop="24dp"
+        android:id="@+id/sb_my_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_rightIcon="@drawable/ic_back"
+        app:bar_leftText="代码开源"
+        app:layout_constraintTop_toBottomOf="@+id/sb_my_history" />
+
+    <cool.ldr.pnet.views.SettingBar
+        android:id="@+id/sb_my_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_rightIcon="@drawable/ic_back"
+        app:bar_leftText="分享一下"
+        app:layout_constraintTop_toBottomOf="@+id/sb_my_code" />
+
+
+    <cool.ldr.pnet.views.SettingBar
+        android:id="@+id/sb_my_report_bug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_rightIcon="@drawable/ic_back"
+        app:bar_leftText="错误报告"
+        app:layout_constraintTop_toBottomOf="@+id/sb_my_share" />
+
+    <TextView
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/tv_about_ysxy"
+        app:layout_constraintBottom_toTopOf="@+id/tv_about_ba"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tv_about_fwtk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="服务条款"
+        android:textColor="?colorPrimary"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@+id/tv_about_fwtk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_about_fwtk"
+        android:layout_marginStart="8dp"
+        android:id="@+id/tv_about_ysxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="隐私协议"
+        android:textColor="?colorPrimary"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_weight="1" />
+
+
+    <TextView
+        android:id="@+id/tv_about_ba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_about_us"
+        android:textColor="?colorPrimary"
+        android:text="备案号"
+        android:textSize="@dimen/font_smallest"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="开发者"
+        android:textSize="@dimen/font_smallest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

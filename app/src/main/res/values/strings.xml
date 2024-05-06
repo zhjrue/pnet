@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">纳米酶工具箱</string>
+    <string name="title_home">纳米酶</string>
+    <string name="title_dashboard">可视化</string>
+    <string name="title_notifications">我的</string>
+
+
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+
+    <string name="address_title">请选择酶类型</string>
+    <string name="address_hint">请选择</string>
+    <string name="help">help</string>
+
+    <string name="doi">DOI</string>
+    <string name="title">文论标题</string>
+    <string name="material">材料</string>
+    <string name="material_type">材料类型</string>
+    <string name="enzyme_type">酶类型</string>
+    <string name="substrate">底物</string>
+    <string name="km">米氏常数Km</string>
+    <string name="vmax">最大速率Vmax</string>
+    <string name="kcat">kcat</string>
+    <string name="pH">pH</string>
+
+
+    <!--    val keys = listOf("doi", "title", "material", "material_type", "enzyme_type",-->
+    <!--    "substrate", "km", "vmax", "kcat", "pH")-->
+</resources>

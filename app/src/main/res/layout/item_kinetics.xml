@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp"
+    app:contentPadding="8dp"
+    app:cardBackgroundColor="@color/background">
+    <!-- 在这里添加你的内容 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_k_material"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="名  称"
+            android:textColor="@color/colorTextContent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_k_enzyme_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="类型"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_k_material" />
+
+
+        <TextView
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintEnd_toStartOf="@+id/tv_k_vmax"
+            android:id="@+id/tv_score_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_k_enzyme_type"
+            android:textColor="@color/colorTextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Vmax:" />
+
+
+        <TextView
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_item_score_qz"
+            app:layout_constraintStart_toEndOf="@+id/tv_score_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_score_1"
+            android:id="@+id/tv_k_vmax"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="?attr/colorPrimary"
+            android:text="100" />
+
+
+        <TextView
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_k_km"
+            android:id="@+id/tv_item_score_qz"
+            app:layout_constraintTop_toTopOf="@+id/tv_score_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_k_vmax"
+            android:textColor="@color/colorTextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Km:" />
+
+
+        <TextView
+            app:layout_constraintEnd_toStartOf="@+id/tv_score_qm"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/tv_score_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_item_score_qz"
+            android:id="@+id/tv_k_km"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:textColor="?attr/colorPrimary"
+            android:text="100" />
+
+
+        <TextView
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_k_kcat"
+            android:id="@+id/tv_score_qm"
+            app:layout_constraintTop_toTopOf="@+id/tv_score_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_k_km"
+            android:textColor="@color/colorTextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kcat:" />
+
+
+        <TextView
+            android:layout_marginStart="8dp"
+            android:id="@+id/tv_k_kcat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_score_qm"
+            app:layout_constraintTop_toTopOf="@+id/tv_score_1" />
+
+        <ImageView
+            android:id="@+id/iv_item_k_selected"
+            android:visibility="invisible"
+            android:src="@drawable/ic_selected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:ignore="ContentDescription" />
+
+        <!--        <TextView-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/tv_k_ph"-->
+        <!--            android:id="@+id/tv_ph"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/tv_score_1"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/tv_k_kcat"-->
+        <!--            android:textColor="@color/colorTextContent"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="PH:" />-->
+
+
+        <!--        <TextView-->
+        <!--            android:layout_marginStart="8dp"-->
+        <!--            android:id="@+id/tv_k_ph"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:text="100"-->
+        <!--            android:textColor="?attr/colorPrimary"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/tv_ph"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/tv_score_1" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

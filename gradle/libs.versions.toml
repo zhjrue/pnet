@@ -1,0 +1,66 @@
+[versions]
+agp = "8.3.2"
+anychartAndroid = "1.1.5"
+autodisposeAndroid = "2.2.1"
+baserecyclerviewadapterhelper4 = "4.1.4"
+javaxAnnotationApi = "1.3.2"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+kotlinStdlib = "1.9.22"
+lombok = "1.18.30"
+material = "1.11.0"
+constraintlayout = "2.1.4"
+lifecycleLivedataKtx = "2.7.0"
+lifecycleViewmodelKtx = "2.7.0"
+navigationFragment = "2.7.7"
+navigationUi = "2.7.7"
+refreshLayoutKernel = "2.1.0"
+rxandroid = "3.0.2"
+rxjava = "3.1.8"
+shapedrawable = "3.0"
+shapeview = "9.0"
+utilcodex ="1.31.1"
+browser ="1.8.0"
+gson = "2.10.1"
+cardview = "1.0.0"
+activity = "1.8.0"
+
+[libraries]
+any-chart = { module = "com.github.AnyChart:AnyChart-Android", version.ref = "anychartAndroid" }
+autodispose-android = { module = "com.uber.autodispose2:autodispose-android", version.ref = "autodisposeAndroid" }
+autodispose-androidx-lifecycle = { module = "com.uber.autodispose2:autodispose-androidx-lifecycle", version.ref = "autodisposeAndroid" }
+javax-annotation-api = { module = "javax.annotation:javax.annotation-api", version.ref = "javaxAnnotationApi" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlib" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
+refresh-drawable-path = { group = "io.github.scwang90", name = "refresh-drawable-path", version.ref = "refreshLayoutKernel" }
+refresh-header-classics = { group = "io.github.scwang90", name = "refresh-header-classics", version.ref = "refreshLayoutKernel" }
+refresh-header-falsify = { group = "io.github.scwang90", name = "refresh-header-falsify", version.ref = "refreshLayoutKernel" }
+refresh-header-material = { group = "io.github.scwang90", name = "refresh-header-material", version.ref = "refreshLayoutKernel" }
+refresh-layout-kernel = { group = "io.github.scwang90", name = "refresh-layout-kernel", version.ref = "refreshLayoutKernel" }
+rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+shape-drawable = { group = "com.github.getActivity", name = "ShapeDrawable", version.ref = "shapedrawable" }
+shape-view = { group = "com.github.getActivity", name = "ShapeView", version.ref = "shapeview" }
+utilcodex = { group = "com.blankj", name = "utilcodex", version.ref = "utilcodex" }
+# 各种Utils//    https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
+code-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+baseRecyclerViewAdapterHelper = { group = "io.github.cymchad", name = "BaseRecyclerViewAdapterHelper4", version.ref = "baserecyclerviewadapterhelper4" }
+cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinStdlib" }

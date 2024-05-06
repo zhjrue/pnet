@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_margin="8dp"
+    app:contentPadding="8dp"
+    app:cardBackgroundColor="@color/background">
+    <!-- 在这里添加你的内容 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_c_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="Vmax"
+            android:textColor="@color/colorTextContent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/shape_dash_line2"
+            android:layerType="software"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_c1"
+            app:layout_constraintTop_toTopOf="@+id/tv_c1" />
+
+
+        <TextView
+            android:autoLink="web"
+            android:textIsSelectable="true"
+            android:id="@+id/tv_c0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="100"
+            android:gravity="center_horizontal"
+            android:textColor="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_c1"
+            app:layout_constraintEnd_toStartOf="@+id/tv_c1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_c1" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/tv_c1"
+            android:autoLink="web"
+            android:textIsSelectable="true"
+            android:gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="99"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_c0"
+            app:layout_constraintTop_toBottomOf="@+id/tv_c_title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
