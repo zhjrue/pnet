@@ -7,13 +7,16 @@ import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
 
+import androidx.browser.customtabs.CustomTabColorSchemeParams;
 import androidx.browser.customtabs.CustomTabsClient;
 import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.core.content.ContextCompat;
 
 import com.blankj.utilcode.util.LogUtils;
 
 import java.util.Collections;
 
+import cool.ldr.pnet.R;
 import cool.ldr.pnet.views.tastytoast.SimToast;
 
 public class WebUtils {
@@ -30,15 +33,18 @@ public class WebUtils {
             SimToast.toastEL("建议安装 edge 或者 chrome 浏览器\n并设置为默认浏览器，会有更好的体验～");
             openBrowser(url);
         } else {
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            // 设置工具栏颜色，颜色值为一个ARGB值。
+            CustomTabColorSchemeParams colorSchemeParams = new CustomTabColorSchemeParams.Builder()
+                    .setToolbarColor(ContextCompat.getColor(mContext, R.color.primary))
+                    .setSecondaryToolbarColor(ContextCompat.getColor(mContext, R.color.secondary))
+                    .build();
+            builder.setDefaultColorSchemeParams(colorSchemeParams);
 
-            new CustomTabsIntent.Builder()
-                    .build()
-                    .launchUrl(mContext, Uri.parse(url));
+            // 创建CustomTabsIntent
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.launchUrl(mContext, Uri.parse(url));
         }
-//        CustomTabColorSchemeParams colorSchemeParams = new CustomTabColorSchemeParams.Builder()
-//                .setToolbarColor(ContextCompat.getColor(mContext, getThemeColor()))
-//                .setSecondaryToolbarColor(ContextCompat.getColor(mContext, getAccentThemeColor()))
-//                .build();
     }
 
     public static void openBrowser(String targetUrl) {
