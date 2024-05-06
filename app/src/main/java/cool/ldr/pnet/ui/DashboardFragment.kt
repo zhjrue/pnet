@@ -158,13 +158,6 @@ class DashboardFragment : Fragment() {
     }
 
     private fun setPlotData(ks: MutableList<Kinetics>, km: Boolean = false): LineData {
-
-        val lineData = LineData()
-        val entries: MutableList<Entry> = mutableListOf();
-        val y2s: MutableList<String> = mutableListOf();
-        val xs: MutableList<Float> = mutableListOf();
-        val ys: MutableList<Float> = mutableListOf();
-
         val ks2 = ks.sortedBy {
             if (km) {
                 it.km
@@ -172,6 +165,12 @@ class DashboardFragment : Fragment() {
                 it.vmax
             }
         }
+        val lineData = LineData()
+        val entries: MutableList<Entry> = mutableListOf();
+        val y2s: MutableList<String> = mutableListOf();
+        val xs: MutableList<Float> = mutableListOf();
+        val ys: MutableList<Float> = mutableListOf();
+
         var n = 0
         for (k in ks2) {
             val y = if (km) {
@@ -183,7 +182,7 @@ class DashboardFragment : Fragment() {
             entries.add(Entry(x, y))
             xs.add(x)
             ys.add(y)
-            y2s.add("${k.material}(${k.y})")
+            y2s.add("${k.material}(${y})")
             n += 1
         }
         LogUtils.d(n, entries.size, y2s.size)
